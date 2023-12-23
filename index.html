@@ -20,7 +20,7 @@
           <img src="./images/general/ailogo_2023-11-28-111207.png" alt="" />
         </div>
       </div>
-      <ul>
+      <ul class="asidelink-container">
         <div class="list-container">
           <li class="aside-link" data-id="home">home</li>
           <li class="aside-link" data-id="yoruba">Yoruba</li>
@@ -43,7 +43,7 @@
     </nav>
     <main>
       <header class="sec active" id="home">
-        <video controls autoplay muted loop class="video-container">
+        <video controls autoplay loop muted class="video-container" id="home-video">
           <source src="./images/general/naija.mp4" type="video/mp4" />
         </video>
         <div class="text-container">
@@ -57,11 +57,22 @@
               check each tribe on the nav bar to see nigeria finest foods from
               different tribe and region
             </p>
+            <div class="aside-btn">
+              <p>background video controls : </p>
+              <button class="video-btn play-btn" data-id="home-video">
+                <span>play</span><span>pause</span
+                ><span class="switch play-switch"></span>
+              </button>
+              <button class="video-btn sound-btn" data-id="home-video">
+                <span>mute</span><span>unmute</span
+                ><span class="switch sound-switch"></span>
+              </button>
+            </div>
           </article>
         </div>
       </header>
       <section id="yoruba" class="yoruba sec">
-        <video controls autoplay muted loop class="video-container">
+        <video controls autoplay muted loop class="video-container" id="yoruba-video" >
           <source src="./images/yoruba/yoruba.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
@@ -72,13 +83,23 @@
             </div>
 
             <div class="btn-container">
-              <button class="food-btn btn-1">all</button>
-              <button class="food-btn btn-1">swallow</button>
-              <button class="food-btn btn-1">non swallow</button>
+              <button class="food-btn btn-1 yoruba-btn" data-category="all">all</button>
+              <button class="food-btn btn-1 yoruba-btn" data-category="swallow">swallow</button>
+              <button class="food-btn btn-1 yoruba-btn" data-category="swallow">non swallow</button>
+            </div>
+             <div class="aside-btn">
+              <p>background video controls : </p>
+              <button class="video-btn play-btn" data-id="yoruba-video">
+                <span>play</span><span>pause</span
+                ><span class="switch play-switch"></span>
+              </button>
+              <button class="video-btn sound-btn" data-id="yoruba-video">
+                <span>mute</span><span>unmute</span
+                ><span class="switch sound-switch"></span>
+              </button>
             </div>
           </article>
           <div class="menu-container yoruba-container">
-           
             <!-- start of each menu -->
             <!-- <article class="menu">
               <div class="menu-image">
@@ -100,7 +121,7 @@
         </div>
       </section>
       <section id="igbos" class="igbos sec">
-        <video controls autoplay muted loop class="video-container">
+        <video controls autoplay muted loop class="video-container" id="igbo-video" >
           <source src="./images/igbo/igbos.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
@@ -114,6 +135,17 @@
               <button class="food-btn btn-1">all</button>
               <button class="food-btn btn-1">swallow</button>
               <button class="food-btn btn-1">non swallow</button>
+            </div>
+            <div class="aside-btn">
+              <p>background video controls : </p>
+              <button class="video-btn play-btn" data-id="igbo-video">
+                <span>play</span><span>pause</span
+                ><span class="switch play-switch"></span>
+              </button>
+              <button class="video-btn sound-btn" data-id="igbo-video">
+                <span>mute</span><span>unmute</span
+                ><span class="switch sound-switch"></span>
+              </button>
             </div>
           </article>
           <div class="menu-container igbo-container">
@@ -134,12 +166,11 @@
               </div>
             </article>
             <!-- end of each meal -->
-            
           </div>
         </div>
       </section>
       <section id="hausa" class="hausa sec">
-        <video controls autoplay muted loop class="video-container">
+        <video controls autoplay muted loop class="video-container" id="hausa-video" >
           <source src="./images/hausa/hausa.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
@@ -153,6 +184,17 @@
               <button class="food-btn btn-1">all</button>
               <button class="food-btn btn-1">swallow</button>
               <button class="food-btn btn-1">non swallow</button>
+            </div>
+            <div class="aside-btn">
+              <p>background video controls : </p>
+              <button class="video-btn play-btn" data-id="hausa-video">
+                <span>play</span><span>pause</span
+                ><span class="switch play-switch"></span>
+              </button>
+              <button class="video-btn sound-btn" data-id="hausa-video">
+                <span>mute</span><span>unmute</span
+                ><span class="switch sound-switch"></span>
+              </button>
             </div>
           </article>
           <div class="menu-container hausa-container">
@@ -347,13 +389,13 @@
         </div>
       </section>
       <section id="others" class="others sec">
-        <video controls autoplay muted loop class="video-container">
+        <video controls autoplay loop muted class="video-container" id="other-video" >
           <source src="./images/others/others.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
           <article class="tittle">
             <div class="food-tittle">
-              <h1>yoruba food</h1>
+              <h1>other food</h1>
               <div class="title-line"></div>
             </div>
 
@@ -361,6 +403,17 @@
               <button class="food-btn btn-1">all</button>
               <button class="food-btn btn-1">swallow</button>
               <button class="food-btn btn-1">non swallow</button>
+            </div>
+            <div class="aside-btn">
+              <p>background video controls : </p>
+              <button class="video-btn play-btn" data-id="other-video">
+                <span>play</span><span>pause</span
+                ><span class="switch play-switch"></span>
+              </button>
+              <button class="video-btn sound-btn" data-id="other-video">
+                <span>mute</span><span>unmute</span
+                ><span class="switch sound-switch"></span>
+              </button>
             </div>
           </article>
           <div class="menu-container other-container">
@@ -538,13 +591,13 @@
         </div>
       </section>
       <section id="general" class="general sec">
-        <video controls autoplay muted loop class="video-container">
+        <video controls autoplay muted class="video-container" id="general-video" >
           <source src="./images/general/general.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
           <article class="tittle">
             <div class="food-tittle">
-              <h1>yoruba food</h1>
+              <h1>general food</h1>
               <div class="title-line"></div>
             </div>
 
@@ -552,6 +605,17 @@
               <button class="food-btn btn-1">all</button>
               <button class="food-btn btn-1">swallow</button>
               <button class="food-btn btn-1">non swallow</button>
+            </div>
+            <div class="aside-btn">
+              <p>background video controls : </p>
+              <button class="video-btn play-btn" data-id="general-video">
+                <span>play</span><span>pause</span
+                ><span class="switch play-switch"></span>
+              </button>
+              <button class="video-btn sound-btn" data-id="general-video">
+                <span>mute</span><span>unmute</span
+                ><span class="switch sound-switch"></span>
+              </button>
             </div>
           </article>
           <div class="menu-container general-container">

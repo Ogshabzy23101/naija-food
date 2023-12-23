@@ -1,3 +1,6 @@
+// function to dynamically display menu on each section
+
+
 const yorubaFood = [
   {
     img: `./images/yoruba/akara.jpeg`,
@@ -164,11 +167,10 @@ function displayMenu(foodarr, foodcon) {
   foodcon.innerHTML = displayItems
 }
 
+window.addEventListener('DOMContentLoaded', displayMenu(yorubaFood, yoruba), displayMenu(igboFood, igbo))
 
-window.addEventListener('DOMContentLoaded', displayMenu(yorubaFood,yoruba), displayMenu(igboFood,igbo))
-
+// botton for switching sections functionality
 const secs = document.querySelectorAll('.sec')
-
 const btns = document.querySelectorAll('.btn')
 const asideLink = document.querySelectorAll('.aside-link')
   
@@ -200,4 +202,57 @@ asideLink.forEach(function (link) {
     }
   })
 })
+
+// background video function
+const playbtn = document.querySelectorAll('.play-btn')
+const soundbtn = document.querySelectorAll('.sound-btn')
+const videos = document.querySelectorAll('.video-container')
+playbtn.forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    let id = e.currentTarget.dataset.id
+    const currVideo = document.getElementById(id)
+    if (!btn.classList.contains('slide')) {
+      btn.classList.add('slide')
+      currVideo.pause()
+    }
+    else {
+      btn.classList.remove('slide')
+      currVideo.play()
+    }
+  })
+})
+soundbtn.forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    let id = e.currentTarget.dataset.id
+    const currVideo = document.getElementById(id)
+    
+    videos.forEach(function (vid) {
+      if (vid === currVideo) {
+        currVideo.muted = false
+      }
+      else {
+        vid.muted = true
+      }
+    })
+    if (!btn.classList.contains('slide')) {
+      btn.classList.add('slide')
+      currVideo.muted = false
+    }
+    else {
+      btn.classList.remove('slide')
+      currVideo.muted = true
+    }
+    
+  })
+})
+
+// function to filter menu on each section
+
+
+
+
+
+
+
+
 

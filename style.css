@@ -159,7 +159,7 @@ aside {
 .aside-head {
  width: 100%;
  height: 5rem;
- margin-bottom: 4rem;
+ margin-bottom: 1rem;
  background-color: var(--clr-primary-8);
  box-shadow: var(--dark-shadow);
 }
@@ -179,8 +179,74 @@ aside {
 
 
 
+
+
+
+.list-container {
+ height: 100%;
+}
+
+.aside-btn {
+ display: flex;
+ flex-direction: row;
+ width: 70%;
+ text-align: center;
+ place-items: center;
+ margin: auto;
+ justify-content: space-between;
+}
+
+.aside-btn p {
+ color: white;
+ text-transform: capitalize;
+ font-size: 1rem;
+}
+
+.video-btn {
+ width: 7rem;
+ height: 1.5rem;
+ display: flex;
+ border-radius: 10px;
+ align-items: center;
+ justify-content: space-around;
+ border: none;
+ transition: var(--transition);
+ margin-bottom: 1rem;
+ position: relative;
+}
+
+.video-btn span {
+ display: inline-block;
+ font-size: 0.85rem;
+ cursor: pointer;
+ text-transform: capitalize;
+ color: red;
+}
+
+.switch {
+ position: absolute;
+ width: 50%;
+ height: 100%;
+ top: 0;
+ left: 0;
+ background: var(--clr-red-light);
+ border-radius: 10px;
+ margin: 0;
+ display: block;
+ transition: var(--transition);
+}
+
+.slide .play-switch {
+ left: 50%;
+}
+
+.slide .sound-switch {
+ left: 50%;
+}
+
 .aside-link {
  width: 100%;
+
  text-transform: capitalize;
  text-align: center;
  font-size: 1.5rem;
@@ -331,7 +397,7 @@ header {
  main {
   left: 29vw;
   width: 70vw;
-  margin-bottom:0;
+  margin-bottom: 0;
  }
 
 }

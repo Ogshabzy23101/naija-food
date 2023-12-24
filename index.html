@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/5dc8991644.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- styles link -->
     <link rel="stylesheet" href="./style.css" />
     <!-- favicon -->
@@ -14,10 +19,13 @@
     <title>Nigerian Foods</title>
   </head>
   <body>
-    <aside>
+    <aside class="aside">
       <div class="aside-head">
         <div class="aside-img">
           <img src="./images/general/ailogo_2023-11-28-111207.png" alt="" />
+        </div>
+        <div class="aside-cancel">
+          <i class="fa-solid fa-xmark"></i>
         </div>
       </div>
       <ul class="asidelink-container">
@@ -31,7 +39,8 @@
         </div>
       </ul>
     </aside>
-    <nav class="nav">
+
+    <!-- <nav class="nav">
       <div class="nav-conainer">
         <button data-id="home" class="btn">home</button>
         <button data-id="yoruba" class="btn">yoruba</button>
@@ -40,10 +49,20 @@
         <button data-id="others" class="btn">others</button>
         <button data-id="general" class="btn">general</button>
       </div>
-    </nav>
+    </nav> -->
     <main>
+      <div class="nav-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
       <header class="sec active" id="home">
-        <video controls autoplay loop muted class="video-container" id="home-video">
+        <video
+          controls
+          autoplay
+          loop
+          muted
+          class="video-container"
+          id="home-video"
+        >
           <source src="./images/general/naija.mp4" type="video/mp4" />
         </video>
         <div class="text-container">
@@ -57,8 +76,8 @@
               check each tribe on the nav bar to see nigeria finest foods from
               different tribe and region
             </p>
-            <div class="aside-btn">
-              <p>background video controls : </p>
+            <div class="vidcontrol-btn">
+              <p>background video controls :</p>
               <button class="video-btn play-btn" data-id="home-video">
                 <span>play</span><span>pause</span
                 ><span class="switch play-switch"></span>
@@ -72,7 +91,14 @@
         </div>
       </header>
       <section id="yoruba" class="yoruba sec">
-        <video controls autoplay muted loop class="video-container" id="yoruba-video" >
+        <video
+          controls
+          autoplay
+          muted
+          loop
+          class="video-container"
+          id="yoruba-video"
+        >
           <source src="./images/yoruba/yoruba.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
@@ -83,12 +109,21 @@
             </div>
 
             <div class="btn-container">
-              <button class="food-btn btn-1 yoruba-btn" data-category="all">all</button>
-              <button class="food-btn btn-1 yoruba-btn" data-category="swallow">swallow</button>
-              <button class="food-btn btn-1 yoruba-btn" data-category="swallow">non swallow</button>
+              <button class="food-btn btn-1 yoruba-btn" data-category="all">
+                all
+              </button>
+              <button class="food-btn btn-1 yoruba-btn" data-category="swallow">
+                swallow
+              </button>
+              <button
+                class="food-btn btn-1 yoruba-btn"
+                data-category="nonswallow"
+              >
+                non swallow
+              </button>
             </div>
-             <div class="aside-btn">
-              <p>background video controls : </p>
+            <div class="vidcontrol-btn">
+              <p>background video controls :</p>
               <button class="video-btn play-btn" data-id="yoruba-video">
                 <span>play</span><span>pause</span
                 ><span class="switch play-switch"></span>
@@ -121,7 +156,14 @@
         </div>
       </section>
       <section id="igbos" class="igbos sec">
-        <video controls autoplay muted loop class="video-container" id="igbo-video" >
+        <video
+          controls
+          autoplay
+          muted
+          loop
+          class="video-container"
+          id="igbo-video"
+        >
           <source src="./images/igbo/igbos.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
@@ -132,12 +174,21 @@
             </div>
 
             <div class="btn-container">
-              <button class="food-btn btn-1">all</button>
-              <button class="food-btn btn-1">swallow</button>
-              <button class="food-btn btn-1">non swallow</button>
+              <button class="food-btn btn-1 igbo-btn" data-category="all">
+                all
+              </button>
+              <button class="food-btn btn-1 igbo-btn" data-category="swallow">
+                swallow
+              </button>
+              <button
+                class="food-btn btn-1 igbo-btn"
+                data-category="nonswallow"
+              >
+                non swallow
+              </button>
             </div>
-            <div class="aside-btn">
-              <p>background video controls : </p>
+            <div class="vidcontrol-btn">
+              <p>background video controls :</p>
               <button class="video-btn play-btn" data-id="igbo-video">
                 <span>play</span><span>pause</span
                 ><span class="switch play-switch"></span>
@@ -170,7 +221,14 @@
         </div>
       </section>
       <section id="hausa" class="hausa sec">
-        <video controls autoplay muted loop class="video-container" id="hausa-video" >
+        <video
+          controls
+          autoplay
+          muted
+          loop
+          class="video-container"
+          id="hausa-video"
+        >
           <source src="./images/hausa/hausa.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
@@ -181,12 +239,21 @@
             </div>
 
             <div class="btn-container">
-              <button class="food-btn btn-1">all</button>
-              <button class="food-btn btn-1">swallow</button>
-              <button class="food-btn btn-1">non swallow</button>
+              <button class="food-btn btn-1 hausa-btn" data-category="all">
+                all
+              </button>
+              <button class="food-btn btn-1 hausa-btn" data-category="swallow">
+                swallow
+              </button>
+              <button
+                class="food-btn btn-1 hausa-btn"
+                data-category="nonswallow"
+              >
+                non swallow
+              </button>
             </div>
-            <div class="aside-btn">
-              <p>background video controls : </p>
+            <div class="vidcontrol-btn">
+              <p>background video controls :</p>
               <button class="video-btn play-btn" data-id="hausa-video">
                 <span>play</span><span>pause</span
                 ><span class="switch play-switch"></span>
@@ -199,7 +266,7 @@
           </article>
           <div class="menu-container hausa-container">
             <!-- start of each menu -->
-            <article class="menu">
+            <!-- <article class="menu">
               <div class="menu-image">
                 <img src="./images/hausa/awara.jpeg" alt="" />
               </div>
@@ -213,183 +280,20 @@
                   dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
                 </p>
               </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/bambara.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>bambara</h2>
-                  <p>#2500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/danwaka.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>danwaka</h2>
-                  <p>#800</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/gote_acha.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>gote</h2>
-                  <p>#1000</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/gurasa.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>gurasa</h2>
-                  <p>#1500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/koko.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>koko</h2>
-                  <p>#2500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/kosai.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>kosai</h2>
-                  <p>#500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/masa.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>masa</h2>
-                  <p>#1000</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/pate_ache.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>pate</h2>
-                  <p>#1500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/tuwo-shinkafa.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>tuwo</h2>
-                  <p>#2000</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/hausa/waina.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>waina</h2>
-                  <p>#2000</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
+            </article> -->
             <!-- end of each meal -->
           </div>
         </div>
       </section>
       <section id="others" class="others sec">
-        <video controls autoplay loop muted class="video-container" id="other-video" >
+        <video
+          controls
+          autoplay
+          loop
+          muted
+          class="video-container"
+          id="other-video"
+        >
           <source src="./images/others/others.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
@@ -400,12 +304,21 @@
             </div>
 
             <div class="btn-container">
-              <button class="food-btn btn-1">all</button>
-              <button class="food-btn btn-1">swallow</button>
-              <button class="food-btn btn-1">non swallow</button>
+              <button class="food-btn btn-1 other-btn" data-category="all">
+                all
+              </button>
+              <button class="food-btn btn-1 other-btn" data-category="swallow">
+                swallow
+              </button>
+              <button
+                class="food-btn btn-1 other-btn"
+                data-category="nonswallow"
+              >
+                non swallow
+              </button>
             </div>
-            <div class="aside-btn">
-              <p>background video controls : </p>
+            <div class="vidcontrol-btn">
+              <p>background video controls :</p>
               <button class="video-btn play-btn" data-id="other-video">
                 <span>play</span><span>pause</span
                 ><span class="switch play-switch"></span>
@@ -418,7 +331,7 @@
           </article>
           <div class="menu-container other-container">
             <!-- start of each menu -->
-            <article class="menu">
+            <!-- <article class="menu">
               <div class="menu-image">
                 <img src="./images/others/afang.jpeg" alt="" />
               </div>
@@ -432,166 +345,19 @@
                   dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
                 </p>
               </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/others/atama.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>atama</h2>
-                  <p>#2500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/others/edikaiikong.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>edikai ikong</h2>
-                  <p>#800</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/others/fisherman_soup.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>fisherman soup</h2>
-                  <p>#1000</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/others/ijaw.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>ijaw</h2>
-                  <p>#1500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/others/nkukwo.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>nkukwo</h2>
-                  <p>#2500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/others/ofe_nsala.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>ofe nsala</h2>
-                  <p>#500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/others/owoh.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>owoh</h2>
-                  <p>#1000</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/others/rivers_native_soup.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>rivers soup</h2>
-                  <p>#1500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/others/starch.jpg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>starch</h2>
-                  <p>#2000</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
+            </article> -->
             <!-- end of each meal -->
           </div>
         </div>
       </section>
       <section id="general" class="general sec">
-        <video controls autoplay muted class="video-container" id="general-video" >
+        <video
+          controls
+          autoplay
+          muted
+          class="video-container"
+          id="general-video"
+        >
           <source src="./images/general/general.mp4" type="video/mp4" />
         </video>
         <div class="menu-card">
@@ -602,12 +368,24 @@
             </div>
 
             <div class="btn-container">
-              <button class="food-btn btn-1">all</button>
-              <button class="food-btn btn-1">swallow</button>
-              <button class="food-btn btn-1">non swallow</button>
+              <button class="food-btn btn-1 general-btn" data-category="all">
+                all
+              </button>
+              <button
+                class="food-btn btn-1 general-btn"
+                data-category="swallow"
+              >
+                swallow
+              </button>
+              <button
+                class="food-btn btn-1 general-btn"
+                data-category="nonswallow"
+              >
+                non swallow
+              </button>
             </div>
-            <div class="aside-btn">
-              <p>background video controls : </p>
+            <div class="vidcontrol-btn">
+              <p>background video controls :</p>
               <button class="video-btn play-btn" data-id="general-video">
                 <span>play</span><span>pause</span
                 ><span class="switch play-switch"></span>
@@ -620,7 +398,7 @@
           </article>
           <div class="menu-container general-container">
             <!-- start of each menu -->
-            <article class="menu">
+            <!-- <article class="menu">
               <div class="menu-image">
                 <img src="./images/general/bread_and_beans.jpeg" alt="" />
               </div>
@@ -634,143 +412,7 @@
                   dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
                 </p>
               </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/general/fried rice.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>fried rice</h2>
-                  <p>#2500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/general/garri.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>garri</h2>
-                  <p>#800</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/general/grill_fish.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>fish</h2>
-                  <p>#1000</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/general/jollof_rice.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>jollof rice</h2>
-                  <p>#1500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/general/okro.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>okro</h2>
-                  <p>#2500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/general/pepper_soup.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>pepper soup</h2>
-                  <p>#500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/general/puff_puff.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>puff puff</h2>
-                  <p>#1000</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
-            <!-- end of each meal -->
-            <!-- start of each menu -->
-            <article class="menu">
-              <div class="menu-image">
-                <img src="./images/general/suya.jpeg" alt="" />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>suya</h2>
-                  <p>#1500</p>
-                </div>
-                <p class="menutext">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-                  dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,
-                </p>
-              </div>
-            </article>
+            </article> -->
             <!-- end of each meal -->
           </div>
         </div>

@@ -8,7 +8,7 @@ navToggle.addEventListener('click', function () {
   asideBar.classList.add('show-sidebar')
   menu.classList.add('trim')
 })
-asideCancel.addEventListener('click',function () {
+asideCancel.addEventListener('click', function () {
   asideBar.classList.remove('show-sidebar')
   menu.classList.remove('trim')
 })
@@ -160,7 +160,7 @@ const igboFood = [
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
     category: `nonswallow`
   },
-  
+
 ]
 const hausaFood = [
   {
@@ -241,7 +241,7 @@ const hausaFood = [
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
     category: `nonswallow`
   }
-  
+
 ]
 const otherFood = [
   {
@@ -381,8 +381,8 @@ const generalFood = [
     category: `nonswallow`
   },
 
-  
-  
+
+
 ]
 
 
@@ -393,7 +393,7 @@ const yoruba = document.querySelector('.yoruba-container')
 const igbo = document.querySelector('.igbo-container')
 const hausa = document.querySelector('.hausa-container')
 const other = document.querySelector('.other-container')
-const  general= document.querySelector('.general-container')
+const general = document.querySelector('.general-container')
 
 
 function displayMenu(foodArray, foodContainer) {
@@ -417,13 +417,13 @@ function displayMenu(foodArray, foodContainer) {
   foodContainer.innerHTML = displayItems
 }
 
-window.addEventListener('DOMContentLoaded', displayMenu(yorubaFood, yoruba), displayMenu(igboFood, igbo), displayMenu(hausaFood,hausa), displayMenu(otherFood, other), displayMenu(generalFood, general))
+window.addEventListener('DOMContentLoaded', displayMenu(yorubaFood, yoruba), displayMenu(igboFood, igbo), displayMenu(hausaFood, hausa), displayMenu(otherFood, other), displayMenu(generalFood, general))
 
 // botton for switching sections functionality
 const secs = document.querySelectorAll('.sec')
 
 const asideLink = document.querySelectorAll('.aside-link')
-  
+
 
 
 asideLink.forEach(function (link) {
@@ -431,20 +431,20 @@ asideLink.forEach(function (link) {
     // e.preventDefault()
     let id = e.target.dataset.id
     let bodyWidth = window.screen.width
-    
+
     if (id) {
       const currSec = document.getElementById(id)
       secs.forEach(function (sec) {
         sec.classList.remove('active')
       })
-      
+
       currSec.classList.add('active')
-      if (bodyWidth <= 489) {
+      if (bodyWidth < 990) {
         asideBar.classList.remove('show-sidebar')
       }
-      
+
     }
-    
+
   })
 })
 
@@ -456,6 +456,7 @@ playbtn.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     let id = e.currentTarget.dataset.id
     const currVideo = document.getElementById(id)
+
     if (!btn.classList.contains('slide')) {
       btn.classList.add('slide')
       currVideo.pause()
@@ -470,7 +471,7 @@ soundbtn.forEach(function (btn) {
   btn.addEventListener('click', function (e) {
     let id = e.currentTarget.dataset.id
     const currVideo = document.getElementById(id)
-    
+
     videos.forEach(function (vid) {
       if (vid === currVideo) {
         currVideo.muted = false
@@ -487,10 +488,10 @@ soundbtn.forEach(function (btn) {
       btn.classList.remove('slide')
       currVideo.muted = true
     }
-    
+
   })
 
-  
+
 })
 
 // function to filter menu on each section
@@ -510,9 +511,9 @@ yorubaBtn.forEach(function (btn) {
       }
     })
     if (btnCategory === 'all') {
-      displayMenu(yorubaFood,yoruba)
+      displayMenu(yorubaFood, yoruba)
     } else {
-      displayMenu(menuCategory,yoruba)
+      displayMenu(menuCategory, yoruba)
     }
   })
 })
@@ -525,9 +526,9 @@ igboBtn.forEach(function (btn) {
       }
     })
     if (btnCategory === 'all') {
-      displayMenu(igboFood,igbo)
+      displayMenu(igboFood, igbo)
     } else {
-      displayMenu(menuCategory,igbo)
+      displayMenu(menuCategory, igbo)
     }
   })
 })
@@ -540,9 +541,9 @@ hausaBtn.forEach(function (btn) {
       }
     })
     if (btnCategory === 'all') {
-      displayMenu(hausaFood,hausa)
+      displayMenu(hausaFood, hausa)
     } else {
-      displayMenu(menuCategory,hausa)
+      displayMenu(menuCategory, hausa)
     }
   })
 })
@@ -555,9 +556,9 @@ otherBtn.forEach(function (btn) {
       }
     })
     if (btnCategory === 'all') {
-      displayMenu(otherFood,other)
+      displayMenu(otherFood, other)
     } else {
-      displayMenu(menuCategory,other)
+      displayMenu(menuCategory, other)
     }
   })
 })
@@ -570,9 +571,9 @@ generalBtn.forEach(function (btn) {
       }
     })
     if (btnCategory === 'all') {
-      displayMenu(generalFood,general)
+      displayMenu(generalFood, general)
     } else {
-      displayMenu(menuCategory,general)
+      displayMenu(menuCategory, general)
     }
   })
 })

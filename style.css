@@ -155,6 +155,7 @@ aside {
  transition: var(--transition);
  transform: translateX(-100%);
  position: absolute;
+ box-shadow: var(--dark-shadow);
 }
 
 .aside-head {
@@ -216,13 +217,13 @@ aside {
  height: 3rem;
  width: 3rem;
  color: var(--clr-primary-7);
- position: absolute;
+ position: fixed;
  right: 50px;
  top: 20px;
  font-size: 2rem;
  background: transparent;
  z-index: 1;
- background-color: var(--clr-primary-9);
+ background-color: rgba(16, 133, 16, 0.388);
  text-align: center;
  border-radius: 10px;
  animation: bounce 2s ease-in-out infinite;
@@ -310,10 +311,11 @@ aside {
  width: 100%;
 
  text-transform: capitalize;
- text-align: center;
- font-size: 1.5rem;
+ text-align: start;
+ font-size: 1rem;
  font-weight: 500;
- padding: 0.5rem 1rem;
+ padding: 0.5rem;
+ padding-left: 2rem;
  margin: 20px 0;
  transition: var(--transition);
  box-shadow: var(--light-shadow);
@@ -323,8 +325,8 @@ aside {
 
 
 .aside-link:hover {
- padding: 10px;
- font-size: 1.25rem;
+ padding-left: 2.5rem;
+ font-size: 1.1rem;
  background-color: var(--clr-primary-7);
  cursor: pointer;
 }
@@ -396,7 +398,7 @@ aside {
 /* main style */
 main {
  position: absolute;
- width: 100vw ;
+ width: 100vw;
  min-height: 100vh;
  overflow-x: hidden;
  top: 0;
@@ -655,7 +657,47 @@ header {
 
 }
 
-@media screen and (min-width:1090px) {
+@media screen and (min-width:590px) {
+ .btn-container {
+  width: 70%;
+  margin: 0 auto;
+
+ }
+
+ .menu-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  gap: 3rem 1rem;
+  
+ }
+
+ .menu-image {
+  height: 100px;
+  width: 100px;
+ }
+
+ .menu {
+  display: grid;
+  grid-template-columns: 1fr 80%;
+  gap: 1rem;
+  height: 200px;
+  /* width: 400px; */
+  margin: 0 auto;
+  padding: 0 20px;
+ }
+
+ .menu-text {
+  height: 100%;
+  width: 70%;
+  font-size: small;
+ }
+}
+
+
+@media screen and (min-width:990px) {
  .btn-container {
   width: 60%;
   margin: 0 auto;

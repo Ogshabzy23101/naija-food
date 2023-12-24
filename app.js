@@ -442,7 +442,9 @@ asideLink.forEach(function (link) {
       if (bodyWidth < 990) {
         asideBar.classList.remove('show-sidebar')
       }
-
+      videos.forEach(function (vid) {
+        vid.muted = true
+      })
     }
 
   })

@@ -2,12 +2,15 @@
 const navToggle = document.querySelector('.nav-toggle')
 const asideBar = document.querySelector('.aside')
 const asideCancel = document.querySelector('.aside-cancel')
+const menu = document.querySelector('.main')
 navToggle.addEventListener('click', function () {
 
   asideBar.classList.add('show-sidebar')
+  menu.classList.add('trim')
 })
 asideCancel.addEventListener('click',function () {
   asideBar.classList.remove('show-sidebar')
+  menu.classList.remove('trim')
 })
 
 
@@ -418,27 +421,17 @@ window.addEventListener('DOMContentLoaded', displayMenu(yorubaFood, yoruba), dis
 
 // botton for switching sections functionality
 const secs = document.querySelectorAll('.sec')
-const btns = document.querySelectorAll('.btn')
+
 const asideLink = document.querySelectorAll('.aside-link')
   
-btns.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    let id = e.target.dataset.id
-    if (id) {
-      const currSec = document.getElementById(id)
-     secs.forEach(function (sec) {
-      sec.classList.remove('active')
-     })
-      currSec.classList.add('active')
-    }
-  })
-})
+
 
 asideLink.forEach(function (link) {
   link.addEventListener('click', function (e) {
-    e.preventDefault()
+    // e.preventDefault()
     let id = e.target.dataset.id
-  
+    let bodyWidth = window.screen.width
+    
     if (id) {
       const currSec = document.getElementById(id)
       secs.forEach(function (sec) {
@@ -446,7 +439,12 @@ asideLink.forEach(function (link) {
       })
       
       currSec.classList.add('active')
+      if (bodyWidth <= 489) {
+        asideBar.classList.remove('show-sidebar')
+      }
+      
     }
+    
   })
 })
 

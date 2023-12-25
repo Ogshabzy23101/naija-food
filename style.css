@@ -739,11 +739,12 @@ header {
  display: flex;
  flex-direction: column;
  place-items: start;
+ gap: 1rem;
 }
 
 .page-link li {
  margin-left: 3rem;
- margin-top: 1rem;
+ 
  display: flex;
  flex-direction: row;
  place-items: center;

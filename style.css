@@ -168,7 +168,8 @@ aside {
  flex-direction: row;
  place-items: center;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
  display: none;
 }
 
@@ -268,17 +269,23 @@ aside {
 .video-btn {
  width: 5rem;
  height: 1.5rem;
+ padding: 10px 0;
  display: flex;
  border-radius: 10px;
  align-items: center;
  justify-content: space-around;
- border: 1px solid var(--clr-red-light);
+ border: 3px solid var(--clr-primary-8);
  transition: var(--transition);
  margin-bottom: 1rem;
  position: relative;
- background-color: #c58f8f;
+ background-color:var(--clr-primary-7);
  box-shadow: var(--dark-shadow);
  margin-right: 10px;
+}
+
+.video-btn img {
+ width: 15px;
+
 }
 
 .video-btn span {
@@ -296,7 +303,8 @@ aside {
  height: 100%;
  top: 0;
  left: 0;
- background: var(--clr-red-light);
+ background: var(--clr-primary-8);
+ border-color: var(--clr-primary-8);
  border-radius: 10px;
  margin: 0;
  display: block;
@@ -310,6 +318,8 @@ aside {
 .slide .sound-switch {
  left: 50%;
 }
+
+
 
 .aside-link {
  width: 100%;

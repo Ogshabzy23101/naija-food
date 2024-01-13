@@ -429,8 +429,18 @@ header {
  left: 0;
  display: grid;
  place-items: center;
-
+ background-image: url(./images/favicon/mobile-bg.jpg);
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
 }
+
+@media screen and (min-width: 490px) {
+ header {
+  background-image: url(./images/favicon/mobile-bg.jpg);
+ }
+}
+
 
 .video-container {
  position: fixed;
@@ -744,7 +754,7 @@ header {
 
 .page-link li {
  margin-left: 3rem;
- 
+
  display: flex;
  flex-direction: row;
  place-items: center;

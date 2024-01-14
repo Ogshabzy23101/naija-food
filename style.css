@@ -433,11 +433,12 @@ header {
  background-position: center;
  background-repeat: no-repeat;
  background-size: cover;
+ transition: all .2s linear;
 }
 
 @media screen and (min-width: 490px) {
  header {
-  background-image: url(./images/favicon/mobile-bg.jpg);
+  background-image: url(./images/favicon/desktop-bg2.jpg);
  }
 }
 

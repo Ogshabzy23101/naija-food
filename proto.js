@@ -155,7 +155,7 @@ const igboFood = [
     tittle: `okpa`,
     cost: `#3500`,
     desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `non swallow`
+    category: `nonswallow`
   },
   {
     img: `./images/igbo/ona.jpeg`,
@@ -422,18 +422,39 @@ function display(sect, foodarray) {
   this.sectionContainer = this.element.querySelector('.menu-container')
   this.video = this.element.querySelector('.video-container')
   this.asideLink = document.querySelector('.aside')
-  this.btn = this.element.querySelector('.btn-container')
+  this.btnContainer = this.element.querySelector('.btn-container')
   this.playBtn = this.element.querySelector('.play-btn')
   this.muteBtn = this.element.querySelector('.sound-btn')
-  this.asideLink.addEventListener('click', this.displayItems.bind(this))
+  window.addEventListener('DOMContentLoaded', function () {
+    this.displayItems(this.foodarray);
+    this.displaybutton();
+  }.bind(this))
+  // filter items displayed with the button
+  this.btnContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('food-btn')) {
+      const categories = e.target.dataset.category
+      let filteredCategory = this.foodarray.filter(function (item) {
+        if (item.category === categories) {
+          return item
+        }
+      })
+      if (categories === `all`) {
+        this.displayItems(this.foodarray)
+      } else {
+        this.displayItems(filteredCategory)
+      }
+    }
+    
+  }.bind(this))
+
   this.asideLink.addEventListener('click', this.playmuteVideo.bind(this))
-  this.playBtn.addEventListener('click', this.playVid.bind(this) )
+  this.playBtn.addEventListener('click', this.playVid.bind(this))
   this.muteBtn.addEventListener('click', this.muteVid.bind(this))
-  
+
 }
 // display funxtion
-display.prototype.displayItems = function () {
-  const itemsDisplay = this.foodarray.map(function (e) {
+display.prototype.displayItems = function (array) {
+  const itemsDisplay = array.map(function (e) {
     return `<article class="menu">
               <div class="menu-image">
                 <img src=${e.img} alt=${e.tittle} />
@@ -487,50 +508,22 @@ display.prototype.playVid = function () {
 
 
 // filter function
-// display.prototype.filterItems = function (e) {
-//   let categories = e.Target.dataset.id
-//   let filterCategory = this.foodarray.filter(function (item) {
-//     if (item.category === categories) {
-//       return item
-//     }
-//   }).join('')
+display.prototype.displaybutton = function (e) {
+  let btnCategory = this.foodarray.reduce(function (arr, items) {
+    if (!arr.includes(items.category)) {
+      arr.push(items.category)
+    }
+    return arr
+  }, ['all'])
 
-//   if (categories === 'all') {
-//     this.sectionContainer.innerHTML = this.foodarray.map(function (ite) {
-//       return `<article class="menu">
-//               <div class="menu-image">
-//                 <img src=${ite.img} alt=${ite.tittle} />
-//               </div>
-//               <div class="menu-text">
-//                 <div class="menutext-tittle">
-//                   <h2>${ite.tittle}</h2>
-//                   <p>${ite.cost}</p>
-//                 </div>
-//                 <p class="menutext">
-//                  ${ite.desc}
-//                 </p>
-//               </div>
-//             </article>`
-//     }).join('')
-//   } else {
-//     this.sectionContainer.innerHTML = filterCategory.map(function (ite) {
-//       return `<article class="menu">
-//               <div class="menu-image">
-//                 <img src=${ite.img} alt=${ite.tittle} />
-//               </div>
-//               <div class="menu-text">
-//                 <div class="menutext-tittle">
-//                   <h2>${ite.tittle}</h2>
-//                   <p>${ite.cost}</p>
-//                 </div>
-//                 <p class="menutext">
-//                  ${ite.desc}
-//                 </p>
-//               </div>
-//             </article>`
-//     }).join('')
-//   }
-// }
+  this.btnContainer.innerHTML = btnCategory.map(function (each) {
+    return `<button class="food-btn btn-1 yoruba-btn" data-category="${each}">
+                ${each}
+              </button>`
+  }).join('')
+
+
+}
 
 
 
@@ -543,5 +536,3 @@ const igbo = new display(getElement('.igbos'), igboFood)
 const hausa = new display(getElement('.hausa'), hausaFood)
 const other = new display(getElement('.others'), otherFood)
 const general = new display(getElement('.general'), generalFood)
-
-

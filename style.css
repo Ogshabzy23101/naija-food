@@ -594,13 +594,14 @@ header {
  gap: 3rem 2rem;
  justify-items: center;
  max-width: 100%;
+
 }
 
 .menu {
  display: grid;
- grid-template-columns: 1fr 1fr;
- gap: 2rem;
-
+ grid-template-columns: 1fr;
+ gap: .5rem;
+ width: 210px;
 }
 
 .menu-image {
@@ -608,16 +609,30 @@ header {
  width: 200px;
  border: 5px solid var(--clr-primary-5);
  border-radius: 10px;
+ margin: 0 auto;
 }
 
 .menu-image img {
  height: 100%;
  width: 100%;
+ transition: all .3s linear;
+}
+
+.menu-image img:hover {
+ transform: scale(1.2);
+ border-radius: inherit;
 }
 
 .menu-text {
  display: grid;
  grid-template-columns: 1fr;
+ border-radius: 10px;
+ transition: all .3s linear;
+}
+
+.menu-text:hover {
+ transform: translateY(10px);
+
 }
 
 .menutext-tittle {
@@ -628,12 +643,14 @@ header {
  border-bottom: 1px solid var(--clr-primary-5);
  height: 2rem;
  width: 90%;
+ margin: 0 auto;
+ padding: 0 .5rem;
 }
 
 .menutext-tittle h2 {
  font-size: 1rem;
  text-align: center;
- margin-bottom: 0;
+ margin: auto 0;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  color: var(--clr-grey-9);
 
@@ -645,7 +662,6 @@ header {
  font-size: 1rem;
  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
  color: var(--clr-grey-9);
- height: 100%;
 }
 
 .menutext {
@@ -667,14 +683,7 @@ header {
   padding: 2rem 1rem;
  }
 
- .menu {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  width: 400px;
-  height: 200px;
-  margin: 0;
- }
+
 
  .menu-container {
   width: 100%;
@@ -692,7 +701,7 @@ header {
 
 }
 
-@media screen and (min-width:590px) {
+@media screen and (min-width:520px) {
  .btn-container {
   width: 70%;
   margin: 0 auto;
@@ -704,30 +713,12 @@ header {
   margin: 0 auto;
   margin-top: 4rem;
   display: grid;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem 1rem;
 
  }
 
- .menu-image {
-  height: 100px;
-  width: 100px;
- }
 
- .menu {
-  display: grid;
-  grid-template-columns: 1fr 80%;
-  gap: 1rem;
-  height: 200px;
-  margin: 0 auto;
-  padding: 0 20px;
- }
-
- .menu-text {
-  height: 100%;
-  width: 70%;
-  font-size: small;
- }
 }
 
 
@@ -743,7 +734,7 @@ header {
   margin: 0 auto;
   margin-top: 4rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem 1rem;
 
  }
@@ -751,6 +742,41 @@ header {
  .main.trim {
   width: 70vw;
   left: 30vw;
+ }
+}
+
+@media screen and (min-width:1300px) {
+ .menu {
+  width: 350px;
+  
+ }
+
+ .menu-image {
+  height: 340px;
+  width: 340px;
+
+ }
+
+ .menutext-tittle {
+  
+  height: 4rem;
+ }
+
+ .menutext-tittle h2 {
+  font-size: 1.5rem;
+
+ }
+
+ .menutext-tittle p {
+  
+  font-size: 1.5rem;
+  
+ }
+
+ .menutext {
+  padding: 20px;
+  font-size: 1.25rem;
+  color: var(--clr-grey-9);
  }
 }
 

@@ -19,7 +19,6 @@ const asideLink = document.querySelectorAll('.aside-link')
 
 asideLink.forEach(function (link) {
   link.addEventListener('click', function (e) {
-    // e.preventDefault()
     let id = e.target.dataset.id
     let bodyWidth = window.screen.width
 
@@ -33,9 +32,7 @@ asideLink.forEach(function (link) {
       if (bodyWidth < 990) {
         asideBar.classList.remove('show-sidebar')
       }
-      // videos.forEach(function (vid) {
-      //  vid.muted = true
-      // })
+      
     }
 
   })
@@ -53,7 +50,7 @@ function getElement(selector) {
 
 
 
-function display(sect, foodarray) {
+function display (sect, foodarray) {
   self = this
   this.element = sect
   this.foodarray = foodarray

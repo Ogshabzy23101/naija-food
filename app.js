@@ -1,4 +1,3 @@
-// sidebar functions
 const navToggle = document.querySelector('.nav-toggle')
 const asideBar = document.querySelector('.aside')
 const asideCancel = document.querySelector('.aside-cancel')
@@ -14,416 +13,8 @@ asideCancel.addEventListener('click', function () {
 })
 
 
-
-
-
-
-
-
-
-// function to dynamically display menu on each section
-
-
-const yorubaFood = [
-  {
-    img: `./images/yoruba/akara.jpeg`,
-    tittle: `akara`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/yoruba/amala.jpeg`,
-    tittle: `amala`,
-    cost: `#2500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/yoruba/asaro.jpeg`,
-    tittle: `asaro`,
-    cost: `#1000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/yoruba/ekuru.jpeg`,
-    tittle: `ekuru`,
-    cost: `#500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/yoruba/ewa.jpeg`,
-    tittle: `ewa`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/yoruba/iyan.jpeg`,
-    tittle: `iyan`,
-    cost: `#3500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/yoruba/moimoi.jpeg`,
-    tittle: `moimoi`,
-    cost: `#700`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/yoruba/ofada.jpeg`,
-    tittle: `ofada`,
-    cost: `#2000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/yoruba/rice.jpeg`,
-    tittle: `rice`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/yoruba/semo.jpeg`,
-    tittle: `semo`,
-    cost: `#2500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  }
-]
-const igboFood = [
-  {
-    img: `./images/igbo/abacha.jpeg`,
-    tittle: `abacha`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/igbo/egusi.jpeg`,
-    tittle: `egusi`,
-    cost: `#2500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/igbo/fio_fio.jpeg`,
-    tittle: `fio fio`,
-    cost: `#1000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/igbo/nkwobi.jpeg`,
-    tittle: `nkwobi`,
-    cost: `#500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/igbo/ogbono.jpeg`,
-    tittle: `ogbono`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/igbo/okpa.jpeg`,
-    tittle: `okpa`,
-    cost: `#3500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `non swallow`
-  },
-  {
-    img: `./images/igbo/ona.jpeg`,
-    tittle: `ona`,
-    cost: `#700`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/igbo/ukwa.jpeg`,
-    tittle: `ukwa`,
-    cost: `#2000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/igbo/yam_vegetable.jpeg`,
-    tittle: `yam`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-
-]
-const hausaFood = [
-  {
-    img: `./images/hausa/awara.jpeg`,
-    tittle: `awara`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/hausa/bambara.jpeg`,
-    tittle: `bambara`,
-    cost: `#2500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/hausa/danwaka.jpeg`,
-    tittle: `danwaka`,
-    cost: `#1000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/hausa/gote_acha.jpeg`,
-    tittle: `gote`,
-    cost: `#500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/hausa/gurasa.jpeg`,
-    tittle: `gurasa`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/hausa/koko.jpeg`,
-    tittle: `koko`,
-    cost: `#3500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/hausa/kosai.jpeg`,
-    tittle: `kosai`,
-    cost: `#700`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/hausa/masa.jpeg`,
-    tittle: `masa`,
-    cost: `#2000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/hausa/pate_ache.jpeg`,
-    tittle: `pate`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-
-  {
-    img: `./images/hausa/tuwo-shinkafa.jpeg`,
-    tittle: `tuwo`,
-    cost: `#900`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/hausa/waina.jpeg`,
-    tittle: `waina`,
-    cost: `#900`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  }
-
-]
-const otherFood = [
-  {
-    img: `./images/others/afang.jpeg`,
-    tittle: `afang`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/others/atama.jpeg`,
-    tittle: `atama`,
-    cost: `#2500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/others/edikaiikong.jpeg`,
-    tittle: `edikaikong`,
-    cost: `#1000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/others/fisherman_soup.jpeg`,
-    tittle: `fisherman`,
-    cost: `#500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/others/ijaw.jpeg`,
-    tittle: `ijaw`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/others/nkukwo.jpeg`,
-    tittle: `nkukwo`,
-    cost: `#3500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/others/ofe_nsala.jpeg`,
-    tittle: `ofe nsala`,
-    cost: `#700`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/others/owoh.jpeg`,
-    tittle: `owoh`,
-    cost: `#2000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/others/rivers_native_soup.jpeg`,
-    tittle: `native soup`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-
-  {
-    img: `./images/others/starch.jpg`,
-    tittle: `starch`,
-    cost: `#900`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  }
-]
-const generalFood = [
-  {
-    img: `./images/general/bread_and_beans.jpeg`,
-    tittle: `bread`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/general/fried_rice.jpeg`,
-    tittle: `fried rice`,
-    cost: `#2500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/general/garri.jpeg`,
-    tittle: `garri`,
-    cost: `#1000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/general/grill_fish.jpeg`,
-    tittle: `grill fish`,
-    cost: `#500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/general/jollof_rice.jpeg`,
-    tittle: `jollof rice`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/general/okro.jpeg`,
-    tittle: `okro`,
-    cost: `#3500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `swallow`
-  },
-  {
-    img: `./images/general/pepper_soup.jpeg`,
-    tittle: `pepper soup`,
-    cost: `#700`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/general/puff_puff.jpeg`,
-    tittle: `puff puff`,
-    cost: `#2000`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-  {
-    img: `./images/general/suya.jpeg`,
-    tittle: `suya`,
-    cost: `#1500`,
-    desc: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dolorem fugiat reiciendis culpa minima facilis quidem, ipsa,`,
-    category: `nonswallow`
-  },
-
-
-
-]
-
-
-
-
-
-const yoruba = document.querySelector('.yoruba-container')
-const igbo = document.querySelector('.igbo-container')
-const hausa = document.querySelector('.hausa-container')
-const other = document.querySelector('.other-container')
-const general = document.querySelector('.general-container')
-
-
-function displayMenu(foodArray, foodContainer) {
-  const displayItems = foodArray.map(function (e) {
-    return `<article class="menu">
-              <div class="menu-image">
-                <img src=${e.img} alt=${e.tittle} />
-              </div>
-              <div class="menu-text">
-                <div class="menutext-tittle">
-                  <h2>${e.tittle}</h2>
-                  <p>${e.cost}</p>
-                </div>
-                <p class="menutext">
-                 ${e.desc}
-                </p>
-              </div>
-            </article>`
-  }).join('')
-
-  foodContainer.innerHTML = displayItems
-}
-
-window.addEventListener('DOMContentLoaded', displayMenu(yorubaFood, yoruba), displayMenu(igboFood, igbo), displayMenu(hausaFood, hausa), displayMenu(otherFood, other), displayMenu(generalFood, general))
-
-// botton for switching sections functionality
 const secs = document.querySelectorAll('.sec')
-
 const asideLink = document.querySelectorAll('.aside-link')
-
 
 
 asideLink.forEach(function (link) {
@@ -442,147 +33,139 @@ asideLink.forEach(function (link) {
       if (bodyWidth < 990) {
         asideBar.classList.remove('show-sidebar')
       }
-      videos.forEach(function (vid) {
-        vid.muted = true
+      // videos.forEach(function (vid) {
+      //  vid.muted = true
+      // })
+    }
+
+  })
+})
+
+
+function getElement(selector) {
+  const id = document.querySelector(selector)
+  if (id) {
+    return id
+  } else {
+    throw `error please check ${selector} does not e3xist`
+  }
+}
+
+
+
+function display(sect, foodarray) {
+  self = this
+  this.element = sect
+  this.foodarray = foodarray
+  this.sectionContainer = this.element.querySelector('.menu-container')
+  this.video = this.element.querySelector('.video-container')
+  this.asideLink = document.querySelector('.aside')
+  this.btnContainer = this.element.querySelector('.btn-container')
+  this.playBtn = this.element.querySelector('.play-btn')
+  this.muteBtn = this.element.querySelector('.sound-btn')
+  window.addEventListener('DOMContentLoaded', function () {
+    this.displayItems(this.foodarray);
+    this.displaybutton();
+  }.bind(this))
+  // filter items displayed with the button
+  this.btnContainer.addEventListener('click', function (e) {
+    if (e.target.classList.contains('food-btn')) {
+      const categories = e.target.dataset.category
+      let filteredCategory = this.foodarray.filter(function (item) {
+        if (item.category === categories) {
+          return item
+        }
       })
-    }
-
-  })
-})
-
-// background video function
-const playbtn = document.querySelectorAll('.play-btn')
-const soundbtn = document.querySelectorAll('.sound-btn')
-const videos = document.querySelectorAll('.video-container')
-playbtn.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    let id = e.currentTarget.dataset.id
-    const currVideo = document.getElementById(id)
-
-    if (!btn.classList.contains('slide')) {
-      btn.classList.add('slide')
-      currVideo.pause()
-    }
-    else {
-      btn.classList.remove('slide')
-      currVideo.play()
-    }
-  })
-})
-soundbtn.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    let id = e.currentTarget.dataset.id
-    const currVideo = document.getElementById(id)
-
-    videos.forEach(function (vid) {
-      if (vid === currVideo) {
-        currVideo.muted = false
+      if (categories === `all`) {
+        this.displayItems(this.foodarray)
+      } else {
+        this.displayItems(filteredCategory)
       }
-      else {
-        vid.muted = true
-      }
-    })
-    if (!btn.classList.contains('slide')) {
-      btn.classList.add('slide')
-      currVideo.muted = false
     }
-    else {
-      btn.classList.remove('slide')
-      currVideo.muted = true
+    
+  }.bind(this))
+
+  this.asideLink.addEventListener('click', this.playmuteVideo.bind(this))
+  this.playBtn.addEventListener('click', this.playVid.bind(this))
+  this.muteBtn.addEventListener('click', this.muteVid.bind(this))
+
+}
+// display funxtion
+display.prototype.displayItems = function (array) {
+  const itemsDisplay = array.map(function (e) {
+    return `<article class="menu">
+              <div class="menu-image">
+                <img src=${e.img} alt=${e.tittle} />
+              </div>
+              <div class="menu-text">
+                <div class="menutext-tittle">
+                  <h2>${e.tittle}</h2>
+                  <p>${e.cost}</p>
+                </div>
+                <p class="menutext">
+                 ${e.desc}
+                </p>
+              </div>
+            </article>`
+  }).join('')
+  this.sectionContainer.innerHTML = itemsDisplay
+}
+// playmute function
+display.prototype.playmuteVideo = function () {
+  if (this.element.classList.contains('active')) {
+    this.video.play()
+    this.video.muted = false
+  } else if (!this.element.classList.contains('active')) {
+    this.video.pause()
+    this.video.muted = true
+  }
+}
+// playfunction
+display.prototype.muteVid = function () {
+  if (!this.muteBtn.classList.contains('slide')) {
+    this.muteBtn.classList.add('slide')
+    this.video.muted = true
+  }
+  else {
+    this.muteBtn.classList.remove('slide')
+    this.video.muted = false
+  }
+}
+display.prototype.playVid = function () {
+  if (!this.playBtn.classList.contains('slide')) {
+    this.playBtn.classList.add('slide')
+    this.video.pause()
+  }
+  else {
+    this.playBtn.classList.remove('slide')
+    this.video.play()
+  }
+}
+
+
+
+
+// filter function
+display.prototype.displaybutton = function (e) {
+  let btnCategory = this.foodarray.reduce(function (arr, items) {
+    if (!arr.includes(items.category)) {
+      arr.push(items.category)
     }
+    return arr
+  }, ['all'])
 
-  })
-
-
-})
-
-// function to filter menu on each section
-
-const yorubaBtn = document.querySelectorAll('.yoruba-btn')
-const igboBtn = document.querySelectorAll('.igbo-btn')
-const hausaBtn = document.querySelectorAll('.hausa-btn')
-const otherBtn = document.querySelectorAll('.other-btn')
-const generalBtn = document.querySelectorAll('.general-btn')
-
-yorubaBtn.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    let btnCategory = e.currentTarget.dataset.category
-    const menuCategory = yorubaFood.filter(function (items) {
-      if (items.category === btnCategory) {
-        return items
-      }
-    })
-    if (btnCategory === 'all') {
-      displayMenu(yorubaFood, yoruba)
-    } else {
-      displayMenu(menuCategory, yoruba)
-    }
-  })
-})
-igboBtn.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    let btnCategory = e.currentTarget.dataset.category
-    const menuCategory = igboFood.filter(function (items) {
-      if (items.category === btnCategory) {
-        return items
-      }
-    })
-    if (btnCategory === 'all') {
-      displayMenu(igboFood, igbo)
-    } else {
-      displayMenu(menuCategory, igbo)
-    }
-  })
-})
-hausaBtn.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    let btnCategory = e.currentTarget.dataset.category
-    const menuCategory = hausaFood.filter(function (items) {
-      if (items.category === btnCategory) {
-        return items
-      }
-    })
-    if (btnCategory === 'all') {
-      displayMenu(hausaFood, hausa)
-    } else {
-      displayMenu(menuCategory, hausa)
-    }
-  })
-})
-otherBtn.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    let btnCategory = e.currentTarget.dataset.category
-    const menuCategory = otherFood.filter(function (items) {
-      if (items.category === btnCategory) {
-        return items
-      }
-    })
-    if (btnCategory === 'all') {
-      displayMenu(otherFood, other)
-    } else {
-      displayMenu(menuCategory, other)
-    }
-  })
-})
-generalBtn.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    let btnCategory = e.currentTarget.dataset.category
-    const menuCategory = generalFood.filter(function (items) {
-      if (items.category === btnCategory) {
-        return items
-      }
-    })
-    if (btnCategory === 'all') {
-      displayMenu(generalFood, general)
-    } else {
-      displayMenu(menuCategory, general)
-    }
-  })
-})
+  this.btnContainer.innerHTML = btnCategory.map(function (each) {
+    return `<button class="food-btn btn-1 yoruba-btn" data-category="${each}">
+                ${each}
+              </button>`
+  }).join('')
 
 
+}
 
 
-
-
-
+const yoruba = new display(getElement('.yoruba'), yorubaFood)
+const igbo = new display(getElement('.igbos'), igboFood)
+const hausa = new display(getElement('.hausa'), hausaFood)
+const other = new display(getElement('.others'), otherFood)
+const general = new display(getElement('.general'), generalFood)
